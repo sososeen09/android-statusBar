@@ -45,6 +45,11 @@ public class StatusBarUtils {
 
             //布局根视图设置fitsSystemWindows为true可以使得，系统自动为视图添加一个状态栏/导航栏高度的padding
             window.getDecorView().setFitsSystemWindows(true);
+
+            //实际上对于5.0以上的手机只需要设置  View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            // 就能够保证布局顶到状态栏上面，不需要在设置setFitsSystemWindows 为true，
+            // 如果不需要隐藏导航栏，不需要使用SYSTEM_UI_FLAG_HIDE_NAVIGATION
+
         }
     }
 
